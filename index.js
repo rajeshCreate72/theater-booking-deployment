@@ -35,3 +35,10 @@ app.use("/api/bookings", bookingRoutes);
 app.listen(8080, () => {
     console.log("Server is running at 8080");
 });
+
+const path = require("path");
+
+__dirname = path.resolve();
+
+// For deployment
+app.use(express.static("./public"));
